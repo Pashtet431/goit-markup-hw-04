@@ -7,6 +7,7 @@
   --light-color: #ffffff;
   --background-color-comand: #f5f4fa;
   --background-color-hero: #c4c4c4;
+  --social-icon-color: #afb1bb;
 }
 
 .list {
@@ -122,6 +123,7 @@ address {
 }
 
 .nav-list,
+.nav-list-tel,
 .nav-list-mail {
   list-style: none;
   font-family: var(--basic-title);
@@ -140,16 +142,8 @@ address {
   margin-left: auto;
 }
 
-.mail-to {
-  margin-right: 50px;
-}
-
-.icon-contact {
-  margin-right: 10px;
-}
-
-.nav-list:hover,
-.nav-list:focus,
+.nav-list-tel:hover,
+.nav-list-tel:focus,
 .nav-contacts:hover,
 .nav-contacts:focus,
 .nav-list-f:hover,
@@ -157,13 +151,20 @@ address {
 .adress:hover,
 .address:focus,
 .nav-list-mail:hover,
-.nav-list-mail:focus,
-.icon-mail:hover,
-.icon-mail:focus,
-.icon-tel:hover,
-.icon-tel:focus {
-  stroke: var(--accent-color);
+.nav-list-mail:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.icon-post,
+.icon-phone {
+  display: flex;
+  margin-right: 50px;
+}
+
+.icon-mail,
+.icon-tel {
+  margin-right: 10px;
 }
 
 .hero {
@@ -231,10 +232,19 @@ address {
   color: var(--main-color);
 
   margin-bottom: 10px;
+  margin-top: 30px;
 }
 
-.advantages-list {
+.icon-advantages {
   display: flex;
+  margin: 25px 100px;
+}
+
+.advantage-background {
+  display: flex;
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-color-comand);
 }
 
 .advantages-list:not(:last-child) {
@@ -328,13 +338,63 @@ address {
   padding-bottom: 30px;
 }
 
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-list-icon,
+.client-icon {
+  fill: var(--social-icon-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--light-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-icons {
+  width: 206px;
+  height: 44px;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.client-icon {
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.client-icon:hover,
+.client-icon:focus {
+  fill: var(--accent-color);
+  border: solid;
+  border-color: var(--accent-color);
+}
+
 /* Футер */
+
+.footer-container {
+  display: flex;
+}
 
 .logo-s {
   color: var(--light-color);
 }
 
 .footer {
+  display: block;
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -369,6 +429,54 @@ address {
 
 .footer-nav {
   margin-top: 9px;
+}
+
+.footer-invitation {
+  font-family: var(--basic-title);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--light-color);
+}
+
+.invitation {
+  display: block;
+  width: 206px;
+  height: 80px;
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
+/* Іконки соцюмереж в футері */
+
+.invitation-icons {
+  margin-top: 20px;
+}
+
+.invitation-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.invitation-list-icon {
+  fill: var(--light-color);
+}
+
+.invitation-list-link,
+.invitation-list-link {
+  background-color: rgba(255, 255, 255, 10%);
+}
+
+.invitation-list-link:hover,
+.invitation-list-link:focus {
+  background-color: var(--accent-color);
 }
 
 /* =========== ПОРТФОЛИО ========== */
@@ -409,6 +517,11 @@ address {
 .btn-p:focus {
   background-color: var(--accent-color);
   color: var(--light-color);
+}
+
+.main-work:hover,
+.main-work:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* Подписи под работами */
