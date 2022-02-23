@@ -160,6 +160,7 @@ address {
 .icon-phone {
   display: flex;
   margin-right: 50px;
+  fill: var(--secondary-color);
 }
 
 .icon-mail,
@@ -172,11 +173,9 @@ address {
     url('../images/background-hero.jpg');
   background-size: cover;
   background-color: var(--background-color-hero);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -237,11 +236,12 @@ address {
 
 .icon-advantages {
   display: flex;
-  margin: 25px 100px;
 }
 
 .advantage-background {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   background-color: var(--background-color-comand);
@@ -279,7 +279,7 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .command {
@@ -363,29 +363,45 @@ address {
 }
 
 .social-icons {
-  width: 206px;
-  height: 44px;
-  margin: 0 auto;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 16px;
 }
 
-.client-icon {
+.soc-icons-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* ====== Наши клиенты ====== */
+
+.client-icon-list {
+  width: 170px;
+  height: 92px;
+}
+
+.clients-icon-link {
+  width: 100%;
+  height: 100%;
   border: 1px solid #afb1b8;
-  box-sizing: border-box;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-icon-link:hover,
+.clients-icon-link:focus {
+  border: solid var(--accent-color);
 }
 
 .client-icon:hover,
 .client-icon:focus {
   fill: var(--accent-color);
-  border: solid;
-  border-color: var(--accent-color);
 }
 
 /* Футер */
 
 .footer-container {
+  align-items: baseline;
   display: flex;
 }
 
@@ -443,10 +459,6 @@ address {
 }
 
 .invitation {
-  display: block;
-  width: 206px;
-  height: 80px;
-  margin-top: 12px;
   margin-left: 70px;
 }
 
@@ -477,6 +489,10 @@ address {
 .invitation-list-link:hover,
 .invitation-list-link:focus {
   background-color: var(--accent-color);
+}
+
+.soc-icons-f:not(:last-child) {
+  margin-right: 10px;
 }
 
 /* =========== ПОРТФОЛИО ========== */
